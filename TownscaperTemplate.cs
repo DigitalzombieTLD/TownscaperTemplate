@@ -3,7 +3,7 @@
 
 namespace TownscaperTemplate
 {
-    public class LittleEnvironmentMain : MelonMod
+    public class TownscaperTemplateMain : MelonMod
     {		
 		public override void OnApplicationStart()
 		{	
