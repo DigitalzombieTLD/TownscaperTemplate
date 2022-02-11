@@ -4,12 +4,18 @@ using UnityEngine;
 namespace TownscaperTemplate
 {
 	public static class MyInput
-	{		
+	{
+		public static MelonMod thisMod;
+		public static KeyCode myKeycode = KeyCode.None;
 		public static void GetInput()
-		{		
-			if(Input.GetKeyDown(KeyCode.Space))
+		{
+			// Don't accept input before keycodes are loaded from settings
+			if(MyModUI.isInitialized)
 			{
-				MelonLogger.Msg("Space pressed!");
+				if (Input.GetKeyDown(myKeycode))
+				{
+					MelonLogger.Msg("Input button was pressed!");
+				}
 			}
 		}
 	}

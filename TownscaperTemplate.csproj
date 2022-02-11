@@ -52,6 +52,10 @@
       <HintPath>G:\Games\Steam\steamapps\common\Townscaper\MelonLoader\MelonLoader.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="ModUI">
+      <HintPath>G:\Games\Steam\steamapps\common\Townscaper\Mods\ModUI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Rewired_Core, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
       <Private>False</Private>
     </Reference>
@@ -71,6 +75,11 @@
     </Reference>
     <Reference Include="UnhollowerRuntimeLib">
       <HintPath>G:\Games\Steam\steamapps\common\Townscaper\MelonLoader\Managed\UnhollowerRuntimeLib.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>G:\Games\Steam\steamapps\common\Townscaper\MelonLoader\Managed\Unity.TextMeshPro.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
@@ -93,6 +102,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ModSettingsExamples.cs" />
+    <Compile Include="MyModUI.cs" />
     <Compile Include="MyInput.cs" />
     <Compile Include="TownscaperTemplate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
