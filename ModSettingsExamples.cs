@@ -26,6 +26,10 @@ namespace TownscaperTemplate
 			KeyCode exampleKeyCode = KeyCode.Space;
 			MyModUI.myModSettings.SetValueKeyCode("NewKeyCodeValue", "ExampleInputSection", exampleKeyCode);
 
+			// Set new color32 value setting
+			Color32 exampleColor = new Color32(100, 100, 100, 255);
+			MyModUI.myModSettings.SetValueColor32("NewColorValue", exampleColor);
+
 			// Save all settings to file. Changes are only hold on runtime otherwise.
 			// Get's called automatically on closing of the main ModUI sidebar
 			MyModUI.myModSettings.SaveToFile();
@@ -82,6 +86,17 @@ namespace TownscaperTemplate
 			else
 			{
 				MelonLogger.Msg("Example KeyCode was found: ", exampleKeyCode.ToString());
+			}
+
+			// Try to retreive Color32 value from settings
+			bool doesColorExistInSettings = MyModUI.myModSettings.GetValueColor32("NewColorValue", out Color32 exampleColor);
+			if (!doesColorExistInSettings)
+			{
+				MelonLogger.Msg("Example Color32 does not exist in settings");
+			}
+			else
+			{
+				MelonLogger.Msg("Example Color32 was found: [RED] " + exampleColor.r.ToString() + " [GREEN] " + exampleColor.g.ToString() + " [BLUE] " + exampleColor.b.ToString() + " [ALPHA] " + exampleColor.a.ToString());
 			}
 		}
 	}
